@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 2nd Anniversary!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Red+Hat+Display:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Countdown Overlay -->
+    <div id="countdown-overlay">
+        <div class="countdown-container">
+            <h2 class="countdown-title">Counting Down to Our Special Day...</h2>
+            <div id="countdown-timer">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <p>Days</p>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <p>Hours</p>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro / Start Screen (Hidden initially if countdown is active) -->
+    <div id="intro-overlay" style="display: none;">
+        <button id="start-btn">Tap to Open Surprise 🎁</button>
+    </div>
+
+    <!-- Full Screen Slideshow Overlay -->
+    <div id="slideshow-overlay" class="hidden-overlay">
+        <button id="close-slideshow" class="control-btn">&times;</button>
+        <button id="prev-btn" class="control-btn nav-btn">&lt;</button>
+        <img id="slideshow-img" src="" alt="Slideshow Image">
+        <button id="next-btn" class="control-btn nav-btn">&gt;</button>
+    </div>
+
+    <!-- Surprise Section (Hidden initially) -->
+    <div id="surprise-container" class="container hidden-content">
+        <div class="content-wrapper">
+            <div class="cover-image">
+                <img id="cover-slideshow-img" src="photo1.jpeg" alt="Our Memories">
+            </div>
+            <div class="text-content">
+                <h1>Happy 2nd Anniversary! ❤️</h1>
+                <h2 class="couple-names">Suman & Isha</h2>
+                <p class="message">
+                    Two years of love, laughter, and amazing memories.<br>
+                    Here's to forever with you!
+                </p>
+
+                <!-- In-Card Countdown -->
+                <div class="card-countdown">
+                    <div class="mini-time-box"><span id="c-days">00</span>D</div>
+                    <div class="mini-time-box"><span id="c-hours">00</span>H</div>
+                    <div class="mini-time-box"><span id="c-minutes">00</span>M</div>
+                    <div class="mini-time-box"><span id="c-seconds">00</span>S</div>
+                </div>
+
+                <div class="visual-wrapper">
+                    <div class="anime-container">
+                        <div class="css-heart"></div>
+                    </div>
+                </div>
+
+                <!-- Hidden Video for Audio -->
+                <div style="width:0; height:0; overflow:hidden; opacity:0;">
+                    <video id="main-video" loop playsinline>
+                        <source src="song.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+
+
+                <button id="music-control-btn">Play Song 🎵</button>
+            </div>
+
+            <canvas id="confetti-canvas"></canvas>
+
+            <script src="script.js"></script>
+</body>
+
+</html>

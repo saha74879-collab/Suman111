@@ -637,29 +637,63 @@ button:hover,
 }
 
 /* Responsive */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .container {
-        width: 95%;
+        width: 90%;
         max-width: 450px;
+        margin: 20px auto;
+        /* Center on mobile */
+        height: auto;
+        /* Allow height to grow */
     }
 
     .content-wrapper {
         flex-direction: column;
+        min-height: auto;
     }
 
     .cover-image {
-        flex: 0 0 250px;
+        flex: 0 0 300px;
         width: 100%;
         border-right: none;
         border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        margin: 0;
+        /* Reset margins */
+        transform: none;
+        /* Remove tilt on mobile */
     }
 
     .text-content {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .couple-names {
+        font-size: 1.8rem;
+    }
+
+    .message {
+        font-size: 1rem;
+    }
+
+    .bottom-nav {
+        width: 90%;
+        max-width: 400px;
+        justify-content: space-around;
+        padding: 0.8rem 1rem;
+    }
+
+    .scroll-indicator {
+        bottom: 100px;
+        /* Move up to avoid nav bar */
+    }
+
+    #gallery-section {
+        padding-bottom: 100px;
+        /* Space for nav */
     }
 }
 

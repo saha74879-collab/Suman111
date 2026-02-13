@@ -48,6 +48,12 @@ const countdownInterval = setInterval(() => {
     if (document.getElementById('hours')) document.getElementById('hours').innerText = String(hours).padStart(2, '0');
     if (document.getElementById('minutes')) document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
     if (document.getElementById('seconds')) document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+
+    // Update In-Card Countdown
+    if (document.getElementById('c-days')) document.getElementById('c-days').innerText = String(days).padStart(2, '0');
+    if (document.getElementById('c-hours')) document.getElementById('c-hours').innerText = String(hours).padStart(2, '0');
+    if (document.getElementById('c-minutes')) document.getElementById('c-minutes').innerText = String(minutes).padStart(2, '0');
+    if (document.getElementById('c-seconds')) document.getElementById('c-seconds').innerText = String(seconds).padStart(2, '0');
 }, 1000);
 
 startBtn.addEventListener('click', () => {

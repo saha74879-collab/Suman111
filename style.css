@@ -637,63 +637,93 @@ button:hover,
 }
 
 /* Responsive */
+/* Responsive */
 @media (max-width: 900px) {
     .container {
-        width: 90%;
-        max-width: 450px;
-        margin: 20px auto;
-        /* Center on mobile */
-        height: auto;
-        /* Allow height to grow */
+        width: 98%;
+        max-width: none;
+        margin: 0 auto;
+        padding: 5px;
     }
 
     .content-wrapper {
-        flex-direction: column;
-        min-height: auto;
+        flex-direction: row;
+        /* Keep side-by-side */
+        align-items: stretch;
+        min-height: 400px;
+        /* Reduced height */
     }
 
     .cover-image {
-        flex: 0 0 300px;
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        margin: 0;
-        /* Reset margins */
+        flex: 0 0 40%;
+        /* Percentage width */
+        height: auto;
+        min-height: 100%;
+        margin-left: 0;
+        margin-top: 0;
         transform: none;
-        /* Remove tilt on mobile */
+        border-right: 1px solid rgba(212, 175, 55, 0.2);
     }
 
     .text-content {
-        padding: 1.5rem;
+        padding: 1rem;
+        gap: 0.8rem;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        /* Smaller text */
+        margin-bottom: 0.2rem;
     }
 
     .couple-names {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
     }
 
     .message {
-        font-size: 1rem;
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .card-countdown {
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .mini-time-box {
+        padding: 0.2rem 0.4rem;
+        min-width: 35px;
+        font-size: 0.7rem;
+    }
+
+    .mini-time-box span {
+        font-size: 0.8rem;
     }
 
     .bottom-nav {
-        width: 90%;
-        max-width: 400px;
-        justify-content: space-around;
-        padding: 0.8rem 1rem;
+        width: 95%;
+        padding: 0.6rem 1rem;
+        bottom: 15px;
     }
 
     .scroll-indicator {
-        bottom: 100px;
-        /* Move up to avoid nav bar */
+        bottom: 80px;
     }
 
     #gallery-section {
-        padding-bottom: 100px;
-        /* Space for nav */
+        padding-bottom: 90px;
+    }
+
+    /* Adjust grid for small screens */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns fixed */
+        gap: 10px;
+    }
+
+    .gallery-item {
+        height: 150px;
     }
 }
 
